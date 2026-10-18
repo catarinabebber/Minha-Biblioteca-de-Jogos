@@ -132,6 +132,162 @@
         <button type="reset" class="botao-secundario">Limpar campos</button>
     </form>
 </section>
+
+<section id="biblioteca">
+    <h2>Minha biblioteca</h2>
+    <p>Consulte os jogos registrados na sua coleção.</p>
+
+    <form action="#" method="get" class="controles">
+        <div class="campo">
+            <label for="pesquisa">Pesquisar jogo</label>
+            <input
+                type="search"
+                id="pesquisa"
+                name="pesquisa"
+                placeholder="Digite o título do jogo"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="filtro-status">Filtrar por status</label>
+            <select id="filtro-status" name="filtro-status">
+                <option value="">Todos os status</option>
+                <option value="pretendo-jogar">Quero jogar</option>
+                <option value="jogando">Jogando</option>
+                <option value="concluido">Concluído</option>
+                <option value="abandonado">Abandonado</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="filtro-plataforma">Filtrar por plataforma</label>
+            <select id="filtro-plataforma" name="filtro-plataforma">
+                <option value="">Todas as plataformas</option>
+                <option value="pc">PC</option>
+                <option value="playstation">PlayStation</option>
+                <option value="xbox">Xbox</option>
+                <option value="nintendo">Nintendo</option>
+                <option value="mobile">Celular</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="ordenacao">Ordenar por</label>
+            <select id="ordenacao" name="ordenacao">
+                <option value="titulo">Título (A-Z)</option>
+                <option value="ano">Ano de lançamento</option>
+                <option value="horas">Horas jogadas</option>
+                <option value="avaliacao">Avaliação</option>
+            </select>
+        </div>
+
+        <button type="submit">Aplicar pesquisa</button>
+    </form>
+
+    <div class="tabela-container">
+        <table>
+            <caption>Jogos cadastrados na biblioteca</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Título</th>
+                    <th scope="col">Gênero</th>
+                    <th scope="col">Plataforma</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Horas</th>
+                    <th scope="col">Avaliação</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Minecraft</td>
+                    <td>Sandbox</td>
+                    <td>PC</td>
+                    <td>2011</td>
+                    <td>Jogando</td>
+                    <td>120</td>
+                    <td>9,5</td>
+                    <td>
+                        <a href="#detalhes-minecraft">Ver detalhes</a>
+                        <button type="button">Editar</button>
+                        <button type="button" class="botao-perigo">Excluir</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>The Witcher 3</td>
+                    <td>RPG</td>
+                    <td>PC</td>
+                    <td>2015</td>
+                    <td>Quero jogar</td>
+                    <td>0</td>
+                    <td>—</td>
+                    <td>
+                        <a href="#detalhes-witcher">Ver detalhes</a>
+                        <button type="button">Editar</button>
+                        <button type="button" class="botao-perigo">Excluir</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Stardew Valley</td>
+                    <td>Simulação</td>
+                    <td>PC</td>
+                    <td>2016</td>
+                    <td>Concluído</td>
+                    <td>85</td>
+                    <td>9,0</td>
+                    <td>
+                        <a href="#detalhes-stardew">Ver detalhes</a>
+                        <button type="button">Editar</button>
+                        <button type="button" class="botao-perigo">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="detalhes">
+    <h2>Detalhes dos jogos</h2>
+    <p>Exemplos de como as informações completas de um jogo serão apresentadas.</p>
+
+    <article id="detalhes-minecraft" class="cartao-jogo">
+        <h3>Minecraft</h3>
+        <p><strong>Gênero:</strong> Sandbox</p>
+        <p><strong>Plataforma:</strong> PC</p>
+        <p><strong>Ano de lançamento:</strong> 2011</p>
+        <p><strong>Status:</strong> Jogando</p>
+        <p><strong>Horas jogadas:</strong> 120</p>
+        <p><strong>Avaliação:</strong> 9,5/10</p>
+        <p><strong>Observações:</strong> Mundo aberto com exploração e construção.</p>
+    </article>
+
+    <article id="detalhes-witcher" class="cartao-jogo">
+        <h3>The Witcher 3</h3>
+        <p><strong>Gênero:</strong> RPG</p>
+        <p><strong>Plataforma:</strong> PC</p>
+        <p><strong>Ano de lançamento:</strong> 2015</p>
+        <p><strong>Status:</strong> Quero jogar</p>
+        <p><strong>Horas jogadas:</strong> 0</p>
+        <p><strong>Avaliação:</strong> Ainda não avaliado</p>
+        <p><strong>Observações:</strong> Jogo planejado para jogar futuramente.</p>
+    </article>
+
+    <article id="detalhes-stardew" class="cartao-jogo">
+        <h3>Stardew Valley</h3>
+        <p><strong>Gênero:</strong> Simulação</p>
+        <p><strong>Plataforma:</strong> PC</p>
+        <p><strong>Ano de lançamento:</strong> 2016</p>
+        <p><strong>Status:</strong> Concluído</p>
+        <p><strong>Horas jogadas:</strong> 85</p>
+        <p><strong>Avaliação:</strong> 9,0/10</p>
+        <p><strong>Observações:</strong> Simulação de fazenda e vida no campo.</p>
+    </article>
+</section>
     </main>
 
     <footer>
