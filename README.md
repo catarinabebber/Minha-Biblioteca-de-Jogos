@@ -28,3 +28,25 @@ Jogo.
 
 Etapa 1 — Estrutura da interface utilizando HTML
 e estilização com CSS.
+
+## Funcionalidades previstas
+
+- Cadastro de jogos
+- Listagem dos jogos cadastrados
+- Visualização de detalhes
+- Pesquisa por título
+- Filtros por status e plataforma
+- Ordenação por título, ano, horas e avaliação
+- Edição de jogos
+- Exclusão de jogos
+
+## Organização dos arquivos
+
+- `index.html`: estrutura da interface.
+- `assets/css/style.css`: estilos da aplicação.
+
+## Observação
+
+Nesta etapa, os dados da biblioteca são estáticos.
+As funcionalidades interativas serão desenvolvidas
+nas próximas etapas do projeto.
