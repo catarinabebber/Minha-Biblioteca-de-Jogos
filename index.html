@@ -27,6 +27,111 @@
                 está jogando ou pretende jogar.
             </p>
         </section>
+        <section id="cadastro">
+    <h2>Cadastrar novo jogo</h2>
+    <p>Preencha as informações para registrar um jogo na biblioteca.</p>
+
+    <form action="#" method="get">
+        <div class="campo">
+            <label for="titulo">Título do jogo</label>
+            <input
+                type="text"
+                id="titulo"
+                name="titulo"
+                placeholder="Ex.: Minecraft"
+                required
+            >
+        </div>
+
+        <div class="campo">
+            <label for="genero">Gênero</label>
+            <select id="genero" name="genero" required>
+                <option value="">Selecione um gênero</option>
+                <option value="aventura">Aventura</option>
+                <option value="acao">Ação</option>
+                <option value="rpg">RPG</option>
+                <option value="estrategia">Estratégia</option>
+                <option value="simulacao">Simulação</option>
+                <option value="esporte">Esporte</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="plataforma">Plataforma</label>
+            <select id="plataforma" name="plataforma" required>
+                <option value="">Selecione uma plataforma</option>
+                <option value="pc">PC</option>
+                <option value="playstation">PlayStation</option>
+                <option value="xbox">Xbox</option>
+                <option value="nintendo">Nintendo</option>
+                <option value="mobile">Celular</option>
+                <option value="outra">Outra</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="ano">Ano de lançamento</label>
+            <input
+                type="number"
+                id="ano"
+                name="ano"
+                min="1950"
+                max="2100"
+                placeholder="Ex.: 2011"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="status">Status do jogo</label>
+            <select id="status" name="status" required>
+                <option value="">Selecione o status</option>
+                <option value="pretendo-jogar">Quero jogar</option>
+                <option value="jogando">Jogando</option>
+                <option value="concluido">Concluído</option>
+                <option value="abandonado">Abandonado</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="horas">Horas jogadas</label>
+            <input
+                type="number"
+                id="horas"
+                name="horas"
+                min="0"
+                step="0.1"
+                value="0"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="avaliacao">Avaliação (0 a 10)</label>
+            <input
+                type="number"
+                id="avaliacao"
+                name="avaliacao"
+                min="0"
+                max="10"
+                step="0.5"
+                placeholder="Ex.: 9.5"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="observacoes">Observações</label>
+            <textarea
+                id="observacoes"
+                name="observacoes"
+                rows="3"
+                placeholder="Escreva suas observações sobre o jogo..."
+            ></textarea>
+        </div>
+
+        <button type="submit">Cadastrar jogo</button>
+        <button type="reset" class="botao-secundario">Limpar campos</button>
+    </form>
+</section>
     </main>
 
     <footer>
