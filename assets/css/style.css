@@ -1,0 +1,301 @@
+/* Configurações gerais */
+
+:root {
+    --fundo: #10131b;
+    --superficie: #191e2b;
+    --superficie-clara: #222a3a;
+    --texto: #f2f4f8;
+    --texto-secundario: #b3bdd0;
+    --destaque: #8b7bff;
+    --borda: #343d50;
+    --perigo: #ef6262;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: #b5aaff;
+}
+
+a:hover {
+    color: white;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--destaque);
+    outline-offset: 3px;
+}
+
+/* Cabeçalho e navegação */
+
+header {
+    padding: 32px 6%;
+    background: var(--superficie);
+    border-bottom: 1px solid var(--borda);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--destaque);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+header p {
+    color: var(--texto-secundario);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+nav a {
+    padding: 9px 14px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: var(--superficie-clara);
+}
+
+/* Conteúdo principal */
+
+main {
+    width: min(1200px, 90%);
+    margin: 32px auto;
+}
+
+section {
+    margin-bottom: 32px;
+    padding: 26px;
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    scroll-margin-top: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+h3 {
+    color: var(--destaque);
+}
+
+section > p {
+    color: var(--texto-secundario);
+}
+
+/* Formulários */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    background: var(--fundo);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #8c97ab;
+}
+
+#cadastro form .campo:last-of-type {
+    grid-column: 1 / -1;
+}
+
+/* Botões */
+
+button {
+    min-height: 40px;
+    padding: 9px 13px;
+    background: var(--destaque);
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.12);
+}
+
+.botao-secundario {
+    background: #414b60;
+}
+
+.botao-perigo {
+    background: #9f343f;
+}
+
+/* Pesquisa, filtros e ordenação */
+
+.controles {
+    margin: 24px 0;
+    padding: 18px;
+    background: var(--superficie-clara);
+    border-radius: 10px;
+}
+
+.controles button {
+    align-self: end;
+}
+
+/* Tabela de jogos */
+
+.tabela-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+caption {
+    padding: 12px;
+    color: var(--texto-secundario);
+    text-align: left;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid var(--borda);
+    vertical-align: top;
+}
+
+th {
+    background: var(--superficie-clara);
+}
+
+td a,
+td button {
+    display: inline-block;
+    margin: 3px;
+}
+
+td button {
+    font-size: 0.85rem;
+}
+
+/* Detalhes */
+
+.cartao-jogo {
+    margin-top: 18px;
+    padding: 20px;
+    background: var(--superficie-clara);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    scroll-margin-top: 20px;
+}
+
+.cartao-jogo h3 {
+    margin-top: 0;
+}
+
+.cartao-jogo p {
+    margin: 8px 0;
+}
+
+/* Rodapé */
+
+footer {
+    padding: 24px;
+    background: var(--superficie);
+    border-top: 1px solid var(--borda);
+    color: var(--texto-secundario);
+    text-align: center;
+}
+
+/* Adaptação para telas pequenas */
+
+@media (max-width: 700px) {
+    header {
+        padding: 24px 5%;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    #cadastro form .campo:last-of-type {
+        grid-column: auto;
+    }
+
+    .controles {
+        padding: 12px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}
