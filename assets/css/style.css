@@ -1,14 +1,24 @@
 /* Configurações gerais */
 
+
 :root {
-    --fundo: #10131b;
-    --superficie: #191e2b;
-    --superficie-clara: #222a3a;
-    --texto: #f2f4f8;
-    --texto-secundario: #b3bdd0;
-    --destaque: #8b7bff;
-    --borda: #343d50;
-    --perigo: #ef6262;
+    --fundo: #0b1020;
+    --superficie: #151d30;
+    --superficie-clara: #202c44;
+    --superficie-hover: #2b3956;
+
+    --texto: #f4f6ff;
+    --texto-secundario: #b9c6dd;
+
+    --destaque: #8b5cf6;
+    --destaque-hover: #a78bfa;
+
+    --borda: #35435f;
+    --perigo: #e35d6a;
+    --sucesso: #39c79a;
+
+    --raio: 14px;
+    --sombra: 0 8px 28px rgba(0, 0, 0, 0.22);
 }
 
 * {
@@ -298,4 +308,34 @@ footer {
     nav a {
         font-size: 0.9rem;
     }
+}
+
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.65;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h2 {
+    color: var(--texto);
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--destaque-hover);
+}
+
+p {
+    line-height: 1.7;
 }
