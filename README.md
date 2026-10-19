@@ -50,3 +50,23 @@ e estilização com CSS.
 Nesta etapa, os dados da biblioteca são estáticos.
 As funcionalidades interativas serão desenvolvidas
 nas próximas etapas do projeto.
+## Etapa 2 — CSS, Layout e Responsividade
+
+Nesta etapa, a interface foi aprimorada utilizando CSS.
+
+### Melhorias realizadas
+
+- Definição da identidade visual.
+- Estilização do formulário de cadastro.
+- Organização do layout com Flexbox e CSS Grid.
+- Melhoria visual da listagem de jogos.
+- Estilização da pesquisa, filtros e ordenação.
+- Responsividade para computadores, tablets e celulares.
+- Media Queries para diferentes larguras.
+- Estados visuais de interação e foco.
+- Mensagens de sucesso, aviso, erro e estado vazio.
+
+### Observação
+
+As funcionalidades dinâmicas serão implementadas
+nas próximas etapas.

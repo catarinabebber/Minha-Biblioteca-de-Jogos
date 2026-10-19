@@ -712,3 +712,73 @@ button:hover {
         font-size: 1.3rem;
     }
 }
+/* MENSAGENS DO SISTEMA */
+
+#mensagens {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.mensagem {
+    padding: 16px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.mensagem-sucesso {
+    background: #12382f;
+    border-color: #39c79a;
+    color: #baf7dd;
+}
+
+.mensagem-aviso {
+    background: #413016;
+    border-color: #e7ad4e;
+    color: #ffe2a6;
+}
+
+.mensagem-erro {
+    background: #421f2b;
+    border-color: #e35d6a;
+    color: #ffd1d6;
+}
+
+.mensagem-vazio {
+    background: #24334d;
+    border-color: #6e90c9;
+    color: #d6e6ff;
+}
+
+/* ACESSIBILIDADE E INTERAÇÃO */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #c4b5fd;
+    outline-offset: 3px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
