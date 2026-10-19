@@ -339,3 +339,66 @@ h3 {
 p {
     line-height: 1.7;
 }
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: linear-gradient(
+        135deg,
+        #151d30,
+        #242047
+    );
+    box-shadow: var(--sombra);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+}
+
+section {
+    min-width: 0;
+    margin-bottom: 0;
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+#inicio {
+    background: linear-gradient(
+        120deg,
+        #202c44,
+        #31265c
+    );
+}
+
+#inicio h2 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+#detalhes {
+    display: grid;
+    grid-template-columns: repeat(
+        3,
+        minmax(0, 1fr)
+    );
+    gap: 18px;
+}
+
+#detalhes > h2,
+#detalhes > p {
+    grid-column: 1 / -1;
+}
+
+.cartao-jogo {
+    margin-top: 0;
+}
