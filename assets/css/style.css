@@ -598,3 +598,117 @@ button:hover {
 .botao-perigo:hover {
     background: #c44859;
 }
+/* =====================================
+   RESPONSIVIDADE - TABLETS
+===================================== */
+
+@media (max-width: 1000px) {
+    #detalhes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #detalhes > h2,
+    #detalhes > p {
+        grid-column: 1 / -1;
+    }
+
+    main {
+        width: 94%;
+    }
+}
+
+/* =====================================
+   RESPONSIVIDADE - CELULARES
+===================================== */
+
+@media (max-width: 700px) {
+    header {
+        padding: 24px 5%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 12px;
+    }
+
+    main {
+        width: 94%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #cadastro form,
+    .controles {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    #cadastro form .campo:last-of-type,
+    #cadastro .acoes-formulario,
+    .controles .acoes-formulario {
+        grid-column: 1;
+    }
+
+    #detalhes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #detalhes > h2,
+    #detalhes > p {
+        grid-column: 1;
+    }
+
+    .acoes-formulario {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acoes-formulario button {
+        width: 100%;
+    }
+
+    .tabela-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 850px;
+    }
+
+    .cartao-jogo {
+        padding: 18px;
+    }
+}
+
+/* =====================================
+   TELAS MUITO PEQUENAS
+===================================== */
+
+@media (max-width: 380px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 14px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
